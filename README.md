@@ -10,6 +10,8 @@
 
 Скрипт должен быть в корне репозитория
 
+проверка
+
 Пример:
 
 `./collect_files.sh /home/input_dir /home/output_dir`

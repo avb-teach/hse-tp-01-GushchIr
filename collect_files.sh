@@ -1,8 +1,7 @@
 #!/bin/bash
 
-input_dir="$1"
-output_dir="$2"
-max_depth=""
+input_dir = "$1"
+output_dir = "$2"
 
 give_name() {
     local way_to_file = "$1"
@@ -19,13 +18,13 @@ give_name() {
     echo "$new_name"
 }
 
-copy_files() {
-    local src="$1"
+copy_files() { 
+    local src = "$1"
     
     for item in "$src"/*; do
         if [ -f "$item" ]; then
             name = $(give_name "$item")
-            cp "$item" "$output_dir/"
+            cp "$item" "$output_dir/$name"
         elif [ -d "$item" ]; then
             copy_files "$item"
         fi
